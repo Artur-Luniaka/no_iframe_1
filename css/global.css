@@ -49,6 +49,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -311,13 +312,14 @@ body {
 .cookie-text {
   margin: 0;
   font-size: 1rem;
+  color: var(--light-color);
   text-align: center;
   max-width: 600px;
   line-height: 1.4;
 }
 
 .cookie-text a {
-  color: var(--accent-color);
+  color: var(--secondary-color);
   text-decoration: underline;
   transition: var(--fast-transition);
 }

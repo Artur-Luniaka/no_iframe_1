@@ -44,5 +44,39 @@
       "author": "Emma Rodriguez",
       "title": "Mobile Gaming Blogger"
     }
-  ]
+  ],
+  "garageInsights": {
+    "title": "Garage Insights",
+    "items": [
+      {
+        "title": "Realistic Car Physics",
+        "description": "Experience highly responsive and intuitive controls that simulate real-world car handling for a more immersive challenge."
+      },
+      {
+        "title": "Variety of Vehicles",
+        "description": "From compact cars to stretch limos and fire trucks – adapt your parking strategy to the vehicle you’re driving."
+      },
+      {
+        "title": "Dynamic Obstacles",
+        "description": "Navigate around cones, barriers, and even rogue AI vehicles as the difficulty ramps up with each level."
+      }
+    ]
+  },
+  "playerAchievements": {
+    "title": "Player Achievements",
+    "items": [
+      {
+        "name": "Parking Pro",
+        "description": "Successfully completed 50 levels without a single collision."
+      },
+      {
+        "name": "Speed Racer",
+        "description": "Finished a level in under 2 minutes."
+      },
+      {
+        "name": "Master Planner",
+        "description": "Solved 10 puzzles using the minimum number of moves."
+      }
+    ]
+  }
 }

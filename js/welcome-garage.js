@@ -63,6 +63,60 @@
       testimonialsContainer.appendChild(testimonialItem);
     });
 
+    // Update Garage Insights section
+    const garageInsightsSection = document.querySelector(".garage-insights");
+    if (garageInsightsSection && data.garageInsights) {
+      const title = garageInsightsSection.querySelector(".section-title");
+      title.textContent = data.garageInsights.title;
+
+      const list = garageInsightsSection.querySelector(".insights-list");
+
+      data.garageInsights?.items.forEach((item) => {
+        const li = document.createElement("li");
+        li.className = "insight-item";
+        li.innerHTML = `
+            <h3 class="insight-title">${item.title}</h3>
+            <p class="insight-description">${item.description}</p>
+          `;
+        list.appendChild(li);
+      });
+    }
+
+    const achievementsSection = document.querySelector(".player-achievements");
+    if (achievementsSection && data.playerAchievements) {
+      const title = achievementsSection.querySelector(".section-title");
+      title.textContent = data.playerAchievements.title;
+
+      const list = achievementsSection.querySelector(".achievements-list");
+
+      data.playerAchievements.items.forEach((item) => {
+        const li = document.createElement("li");
+        li.className = "achievement-item";
+        li.innerHTML = `
+      <h3>${item.name}</h3>
+      <p>${item.description}</p>
+    `;
+        list.appendChild(li);
+      });
+
+      const achievementItems = list.querySelectorAll(".achievement-item");
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      achievementItems.forEach((item) => {
+        observer.observe(item);
+      });
+    }
+
     // Add animation to game flow items
     const flowItems = document.querySelectorAll(".flow-item");
     const observer = new IntersectionObserver(
