@@ -312,7 +312,6 @@ body {
 .cookie-text {
   margin: 0;
   font-size: 1rem;
-  color: var(--light-color);
   text-align: center;
   max-width: 600px;
   line-height: 1.4;

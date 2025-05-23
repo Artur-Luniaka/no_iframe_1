@@ -45,11 +45,6 @@
   border-radius: var(--round-radius);
 }
 
-.cookie-text {
-  color: var(--gray-color);
-  margin-bottom: 1rem;
-}
-
 .cookie-list {
   list-style: none;
   margin-left: 1.5rem;
